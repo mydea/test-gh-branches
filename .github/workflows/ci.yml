@@ -13,7 +13,6 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: [build]
-    if: 1 == 2
     steps:
       - name: Test stuff
         run: echo 'hello'
@@ -22,6 +21,7 @@ jobs:
     name: test-matrix (Node ${{ matrix.node }})
     runs-on: ubuntu-latest
     needs: [build]
+    if: 1 == 2
     strategy:
       matrix:
         node: [10, 12, 14]
