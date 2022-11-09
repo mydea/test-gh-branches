@@ -13,6 +13,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: [build]
+    if: 1 == 2
     steps:
       - name: Test stuff
         run: echo 'hello'
